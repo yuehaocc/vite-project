@@ -7,7 +7,17 @@ const variablePath=normalizePath(path.resolve('./src/variable.scss'))
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      babel:{
+        plugins:[
+          "babel-plugin-styled-components",
+          "@emotion/babel-plugin"
+        ]
+      },
+      jsxImportSource:"@emotion/react"
+    })
+  ],
   css:{
     modules:{
       generateScopedName:"[name]__[local]__[hash:base64:5]"
