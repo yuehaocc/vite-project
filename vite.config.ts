@@ -8,6 +8,9 @@ const variablePath=normalizePath(path.resolve('./src/variable.scss'))
 export default defineConfig({
   plugins: [react()],
   css:{
+    modules:{
+      generateScopedName:"[name]__[local]__[hash:base64:5]"
+    },
     preprocessorOptions:{
       scss:{
         additionalData:`@import "${variablePath}";`
