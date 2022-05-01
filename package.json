@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix ./src"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -17,15 +19,23 @@
     "@emotion/react": "^11.9.0",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.4",
     "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
     "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
     "react-is": "^18.0.0",
     "sass": "^1.50.0",
     "styled-components": "^5.3.5",
     "typescript": "^4.5.4",
     "vite": "^2.9.0",
+    "vite-plugin-eslint": "^1.3.0",
     "vite-plugin-windicss": "^1.8.3",
     "windicss": "^3.5.1"
   }

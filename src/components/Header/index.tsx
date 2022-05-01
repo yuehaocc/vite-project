@@ -1,4 +1,4 @@
-import styles from './index.module.scss'
+// import styles from "./index.module.scss";
 import { devDependencies } from "../../../package.json";
 
 export default function Header() {
@@ -8,5 +8,5 @@ export default function Header() {
         vite version: {devDependencies.vite}
       </h1>
     </div>
-  )
+  );
 }
