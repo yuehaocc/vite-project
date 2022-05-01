@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import autoprefixer from "autoprefixer";
 import windi from "vite-plugin-windicss";
-import viteEslint from 'vite-plugin-eslint';
+import viteEslint from "vite-plugin-eslint";
+import viteStylelint from "@amatlash/vite-plugin-stylelint";
 
 const variablePath = normalizePath(path.resolve("./src/variable.scss"));
 
@@ -18,6 +19,10 @@ export default defineConfig({
     }),
     windi(),
     viteEslint(),
+    viteStylelint({
+      // 对某些文件排除检查
+      exclude: /windicss|node_modules/,
+    }),
   ],
   css: {
     modules: {
